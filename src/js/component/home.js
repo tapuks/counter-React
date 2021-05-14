@@ -3,9 +3,10 @@ import SecondsCounter from "./secondsCounter.jsx";
 
 //create your first component
 export function Home() {
-	let counter = 5;
+	let counter = 0;
 	setInterval(function() {
 		counter++;
+		console.log(counter);
 	}, 1000);
 	return (
 		<div>
@@ -23,7 +24,9 @@ export function Home() {
 				<div className="square">
 					<SecondsCounter seconds={counter} />
 				</div>
-				<div className="square">{counter}</div>
+				<div className="square">
+					<SecondsCounter seconds={counter} />
+				</div>
 			</div>
 		</div>
 	);
