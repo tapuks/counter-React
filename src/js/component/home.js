@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import SecondsCounter from "./secondsCounter.jsx";
 
 //create your first component
 export function Home() {
-	let counter = 0;
-	setInterval(function() {
-		counter++;
-		console.log(counter);
+	const [count, setCount] = useState(0);
+	let contador = count;
+	setInterval(() => {
+		setCount(contador++);
 	}, 1000);
 	return (
 		<div>
@@ -21,12 +21,8 @@ export function Home() {
 				<div className="square"></div>
 				<div className="square"></div>
 				{/* seconds */}
-				<div className="square">
-					<SecondsCounter seconds={counter} />
-				</div>
-				<div className="square">
-					<SecondsCounter seconds={counter} />
-				</div>
+				<div className="square">{count}</div>
+				<div className="square">{count}</div>
 			</div>
 		</div>
 	);
