@@ -27,15 +27,14 @@ const Counter = props => {
 			</div>
 		</div>
 	);
-
-	Counter.PropTypes = {
-		square1: PropTypes.number,
-		square2: PropTypes.number,
-		square3: PropTypes.number,
-		square4: PropTypes.number,
-		square5: PropTypes.number,
-		square6: PropTypes.number
-	};
+};
+Counter.PropTypes = {
+	square1: PropTypes.number,
+	square2: PropTypes.number,
+	square3: PropTypes.number,
+	square4: PropTypes.number,
+	square5: PropTypes.number,
+	square6: PropTypes.number
 };
 
 let counter = 0;
